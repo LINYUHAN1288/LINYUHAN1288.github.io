@@ -560,11 +560,6 @@ header .go-back i {
     height: 40vh !important;
 }
 
-.bg-cover:after {
-    -webkit-animation: rainbow 60s infinite;
-    animation: rainbow 60s infinite;
-}
-
 .bg-cover:before,
 .bg-cover:after {
     position: absolute;
@@ -1896,7 +1891,7 @@ footer .copy-right {
 }
 
 .top-scroll .btn-floating {
-    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
+    background: linear-gradient(to bottom right, rgb(100, 97, 96) 0%, rgb(92, 87, 89) 100%);
     width: 48px;
     height: 48px;
 }
