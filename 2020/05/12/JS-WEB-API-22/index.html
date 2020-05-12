@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JS-WEB-API概念总结-1, YuHan">
+    <meta name="keywords" content="JS-WEB-API概念总结-2, YuHan">
     <meta name="description" content="Front-end">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JS-WEB-API概念总结-1 | YuHan</title>
+    <title>JS-WEB-API概念总结-2 | YuHan</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JS-WEB-API概念总结-1</h1>
+                    <h1 class="description center-align post-title">JS-WEB-API概念总结-2</h1>
                 </div>
             </div>
         </div>
@@ -455,7 +455,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-10
+                    2020-05-12
                 </div>
                 
 
@@ -464,14 +464,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    521
+                    398
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -486,179 +486,98 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="JS-Web-API小结"><a href="#JS-Web-API小结" class="headerlink" title="JS-Web-API小结"></a>JS-Web-API小结</h2><h3 id="1-DOM-Document-Object-Model"><a href="#1-DOM-Document-Object-Model" class="headerlink" title="1.DOM(Document Object Model)"></a>1.DOM(Document Object Model)</h3><ul>
-<li><p>本质</p>
-<ul>
-<li>Html解析出来的树</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>DOM节点操作</p>
-<ul>
-<li><p>获取DOM节点</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> div1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'div1'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 元素</span>
-<span class="token keyword">const</span> divList <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 集合</span>
-<span class="token keyword">const</span> containerList <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'.container'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 集合</span>
-<span class="token keyword">const</span> pList <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//集合</span></code></pre>
-</li>
-<li><p>attribute</p>
-<p>修改html属性，会改变html结构</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> pList <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> p1 <span class="token operator">=</span> pList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-p1<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">'data-name'</span><span class="token punctuation">,</span> <span class="token string">'yuhan'</span><span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p1<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">'data-name'</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
-</li>
-<li><p>property</p>
-<p>修改对象属性，不会体现到html中</p>
-<pre class=" language-javascript"><code class="language-javascript">p1<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token string">'100px'</span>
-p1<span class="token punctuation">.</span>className <span class="token operator">=</span> <span class="token string">'red'</span></code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>DOM结构操作</p>
-<ul>
-<li><p>新增插入节点</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> div1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'div1'</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">//添加新节点</span>
-<span class="token keyword">const</span> p1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span>
-p1<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'this is p1'</span>
-div1<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>p1<span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">//移动节点</span>
-<span class="token keyword">const</span> p2 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'p2'</span><span class="token punctuation">)</span>
-div1<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>p2<span class="token punctuation">)</span></code></pre>
-</li>
-<li><p>获取子元素列表&amp;获取父元素</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 获取子元素列表</span>
-<span class="token keyword">const</span> div1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'div1'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> child <span class="token operator">=</span> div1<span class="token punctuation">.</span>childNodes
-
-<span class="token comment" spellcheck="true">// 获取父元素</span>
-<span class="token keyword">const</span> div1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'div1'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> parent <span class="token operator">=</span> div1<span class="token punctuation">.</span>parentNode</code></pre>
-</li>
-<li><p>删除子元素</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> div1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'div1'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> child <span class="token operator">=</span> div1<span class="token punctuation">.</span>childNodes
-div1<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>child<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>DOM性能</p>
-<ul>
-<li><p>对DOM查询做缓存</p>
-</li>
-<li><p>将频繁操作改为一次性操作 </p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> listNode <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'list'</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">// 创建一个文档片段</span>
-<span class="token keyword">const</span> frag <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createDocumentFragment</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">// 执行插入</span>
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> x <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> x<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> li <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"li"</span><span class="token punctuation">)</span>
-    li<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">"List item"</span> <span class="token operator">+</span> x
-    frag<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment" spellcheck="true">// 插入到DOM树</span>
-listNode<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>frag<span class="token punctuation">)</span></code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-BOM-Browser-Object-Model"><a href="#2-BOM-Browser-Object-Model" class="headerlink" title="2.BOM(Browser Object Model)"></a>2.BOM(Browser Object Model)</h3><ul>
-<li><p>navigator 和 screen</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// navigator</span>
-<span class="token keyword">const</span> ua <span class="token operator">=</span> navigator<span class="token punctuation">.</span>userAgent
-<span class="token keyword">const</span> isChrome <span class="token operator">=</span> ua<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'Chrome'</span><span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>isChrome<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">// screen</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>screen<span class="token punctuation">.</span>width<span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>screen<span class="token punctuation">.</span>height<span class="token punctuation">)</span></code></pre>
-</li>
-<li><p>location 和 history</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// location</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>href<span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>protocol<span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>pathname<span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>search<span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>hash<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">// history</span>
-history<span class="token punctuation">.</span><span class="token function">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-history<span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-</li>
-</ul>
-<h3 id="3-事件"><a href="#3-事件" class="headerlink" title="3.事件"></a>3.事件</h3><ul>
-<li><p>事件绑定</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn1'</span><span class="token punctuation">)</span>
-btn<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> event <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'clicked'</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 通用的绑定函数</span>
-<span class="token keyword">function</span> <span class="token function">bindEvent</span><span class="token punctuation">(</span>elem<span class="token punctuation">,</span> type<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    elem<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span> fn<span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">const</span> a <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'link1'</span><span class="token punctuation">)</span>
-<span class="token function">bindEvent</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token string">'click'</span><span class="token punctuation">,</span> e <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 阻止默认行为</span>
-    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'clicked'</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-</li>
-<li><p>事件冒泡</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> p1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'p1'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> body <span class="token operator">=</span> document<span class="token punctuation">.</span>body
-<span class="token function">bindEvent</span><span class="token punctuation">(</span>p1<span class="token punctuation">,</span> <span class="token string">'click'</span><span class="token punctuation">,</span> event <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    event<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'激活'</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token function">bindEvent</span><span class="token punctuation">(</span>body<span class="token punctuation">,</span> <span class="token string">'click'</span><span class="token punctuation">,</span> event <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'取消'</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-</li>
-<li><p>事件代理</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> div3 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'div3'</span><span class="token punctuation">)</span>
-<span class="token function">bindEvent</span><span class="token punctuation">(</span>div3<span class="token punctuation">,</span> <span class="token string">'click'</span><span class="token punctuation">,</span> event <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">const</span> target <span class="token operator">=</span> event<span class="token punctuation">.</span>target
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>target<span class="token punctuation">.</span>nodeName <span class="token operator">===</span> <span class="token string">'A'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">alert</span><span class="token punctuation">(</span>target<span class="token punctuation">.</span>innerHTML<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-<ul>
-<li><p>代码简洁</p>
-</li>
-<li><p>减少浏览器内存占用</p>
-</li>
-<li><p>合适的场景使用</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>通用的函数绑定</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">bindEvent</span><span class="token punctuation">(</span>elem<span class="token punctuation">,</span> type<span class="token punctuation">,</span> selector<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>fn <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        fn <span class="token operator">=</span> selector
-        selector <span class="token operator">=</span> <span class="token keyword">null</span>
-    <span class="token punctuation">}</span>
-    elem<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span> event <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token keyword">const</span> target <span class="token operator">=</span> event<span class="token punctuation">.</span>target
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>selector<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>target<span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                fn<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> event<span class="token punctuation">)</span>   
-            <span class="token punctuation">}</span>
+                <h2 id="JS-Web-API小结"><a href="#JS-Web-API小结" class="headerlink" title="JS-Web-API小结"></a>JS-Web-API小结</h2><h3 id="4-Ajax"><a href="#4-Ajax" class="headerlink" title="4.Ajax"></a>4.Ajax</h3><ul>
+<li><p>XMLHttpRequest</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 异步请求</span>
+xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"GET"</span><span class="token punctuation">,</span> <span class="token string">"/api"</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+xhr<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>responseText<span class="token punctuation">)</span>
         <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-            fn<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> event<span class="token punctuation">)</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'qita'</span><span class="token punctuation">)</span>
         <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span></code></pre>
+<ul>
+<li>readyState<ul>
+<li>0 - 还没有调用send()方法</li>
+<li>1 - 已调用send()方法，正在发送请求</li>
+<li>2 -  send()方法执行完成，已经接收到全部相应内容</li>
+<li>3 -  正在解析响应内容</li>
+<li>4 - 响应内容解析完成，可以在客户端调用</li>
+</ul>
+</li>
+<li>status<ul>
+<li>2xx - 成功处理请求</li>
+<li>3xx - 需要重定向</li>
+<li>4xx - 客户端请求错误</li>
+<li>5xx - 服务端错误</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>同源策略</p>
+<ul>
+<li>ajax请求时，浏览器要求当前网页和server必须同源</li>
+<li>同源：协议、域名、端口，三者必须一致</li>
+<li>加载图片css js可无视同源策略</li>
+</ul>
+</li>
+<li><p>跨域</p>
+<ul>
+<li>所有的跨域，都必须经过server端允许和配合</li>
+<li>未经server端允许就实现跨域，说明浏览器有漏洞，危险信号</li>
+</ul>
+</li>
+<li><p>JSONP</p>
+<ul>
+<li><script> 可绕过跨域限制
+</li>
+<li><p>服务器可以任意动态拼接数据返回</p>
+</li>
+</ul>
+</li>
+<li><p>简易Ajax</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">ajax</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promis</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'GET'</span><span class="token punctuation">,</span> url<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+        xhr<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">resolve</span><span class="token punctuation">(</span>
+                        JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>responseText<span class="token punctuation">)</span>
+                    <span class="token punctuation">)</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">404</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'404'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>    
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> p
 <span class="token punctuation">}</span></code></pre>
+</li>
+</ul>
+<h3 id="5-存储"><a href="#5-存储" class="headerlink" title="5.存储"></a>5.存储</h3><ul>
+<li>cookie<ul>
+<li>用于浏览器和server通讯</li>
+<li>被借用到本地存储</li>
+<li>document.cookie</li>
+<li>存储大小，最大4kb</li>
+<li>http请求需要发送到服务端</li>
+</ul>
+</li>
+<li>localStorage 和 sessionStorage<ul>
+<li>最大可5M</li>
+<li>API简单易用（setItem、getItem)</li>
+<li>不会随着http请求被发送出去</li>
+<li>localStorage会永久存储，代码或手动删除</li>
+<li>sessionStorage只存在当前会话，浏览器关闭清空</li>
+</ul>
 </li>
 </ul>
 
@@ -686,7 +605,7 @@ btn<span class="token punctuation">.</span><span class="token function">addEvent
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://linyuhan1288.github.io/2020/05/10/JS-WEB-API/">https://linyuhan1288.github.io/2020/05/10/JS-WEB-API/</a>
+                    <a href="https://linyuhan1288.github.io/2020/05/12/JS-WEB-API-22/">https://linyuhan1288.github.io/2020/05/12/JS-WEB-API-22/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -770,7 +689,7 @@ btn<span class="token punctuation">.</span><span class="token function">addEvent
         repo: 'linyuhan1288.github.io',
         owner: 'LINYUHAN1288',
         admin: ["LINYUHAN1288"],
-        id: '2020-05-10T14-33-36',
+        id: '2020-05-12T16-41-19',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -794,9 +713,10 @@ btn<span class="token punctuation">.</span><span class="token function">addEvent
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/05/12/JS-WEB-API-22/">
                     <div class="card-image">
@@ -814,9 +734,59 @@ btn<span class="token punctuation">.</span><span class="token function">addEvent
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-12
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    技术基础
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/05/10/JS-WEB-API/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="JS-WEB-API概念总结-1">
+                        
+                        <span class="card-title">JS-WEB-API概念总结-1</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Js-Web-API 小结-1
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -836,43 +806,6 @@ btn<span class="token punctuation">.</span><span class="token function">addEvent
                         <span class="chip bg-color">JavaScript</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/04/24/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-24
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            yuhan
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>
