@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, YuHan">
+    <meta name="keywords" content="分类: 计算机网络, YuHan">
     <meta name="description" content="Front-end">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签 | YuHan</title>
+    <title>分类: 计算机网络 | YuHan</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -349,73 +349,100 @@
 
     
 
-<div id="tags" class="container chip-container">
+<div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
             </div>
             <div class="tag-chips">
                 
                 
-                <a href="/tags/Javascript/" title="Javascript: 2">
+                
+                <a href="/categories/%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" title="技术基础: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Javascript" style="background-color: #F9EBEA;">Javascript
+                            style="background-color: #F9EBEA;">技术基础
                         <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E9%9D%A2%E8%AF%95/" title="面试: 2">
+                <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="面试" style="background-color: #F5EEF8;">面试
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/TCP/" title="TCP: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="TCP" style="background-color: #D5F5E3;">TCP
+                             chip-active "
+                            style="background-color: #F5EEF8;">计算机网络
                         <span class="tag-length">1</span>
                     </span>
                 </a>
+                
                 
             </div>
         </div>
     </div>
 </div>
 
-    
-    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"Javascript","weight":2,"link":"/tags/Javascript/"},{"text":"面试","weight":2,"link":"/tags/%E9%9D%A2%E8%AF%95/"},{"text":"TCP","weight":1,"link":"/tags/TCP/"}], {
-        autoResize: true
-    });
-</script>
 
     
 
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2020/05/15/TCP%E5%8D%8F%E8%AE%AE/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="TCP协议">
+                            
+                            <span class="card-title">TCP协议</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                TCP 的特性
+TCP 提供一种面向连接的、可靠的字节流服务
+在一个 TCP 连接中，仅有两方进行彼此通信。广播和多播不能用于 TCP
+TCP 使用校验和，确认和重传机制来保证可靠传输
+TCP 给数据分节进行排序，并使用累积确认保证数据的顺
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    计算机网络
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/TCP/">
+                            <span class="chip bg-color">TCP</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">
