@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, YuHan">
+    <meta name="keywords" content="标签: 计算机网络, YuHan">
     <meta name="description" content="Front-end">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类 | YuHan</title>
+    <title>标签: 计算机网络 | YuHan</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -349,100 +349,97 @@
 
     
 
-<div id="category-cloud" class="container chip-container">
+<div id="tags" class="container chip-container">
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
+                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
             </div>
             <div class="tag-chips">
                 
                 
-                
-                <a href="/categories/%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" title="技术基础: 4">
+                <a href="/tags/Javascript/" title="Javascript: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">技术基础
-                        <span class="tag-length">4</span>
+                            data-tagname="Javascript" style="background-color: #F9EBEA;">Javascript
+                        <span class="tag-length">3</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络: 1">
+                <a href="/tags/%E9%9D%A2%E8%AF%95/" title="面试: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">计算机网络
+                            data-tagname="面试" style="background-color: #F5EEF8;">面试
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/TCP/" title="TCP: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="TCP" style="background-color: #D5F5E3;">TCP
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
+                
+                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="计算机网络" style="background-color: #E8F8F5;">计算机网络
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
                 
             </div>
         </div>
     </div>
 </div>
 
-
-    
-    <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
-
     
 
-    let option = {
-        title: {
-            left: 'center',
-            text: '文章分类雷达图',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"技术基础","max":5},{"name":"计算机网络","max":5}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [4,1],
-                    name : '文章分类数量'
-                }
-            ]
-        }]
-    };
-
-    radarChart.setOption(option);
-</script>
-
-    
-
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="计算机网络" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2020/05/19/%E5%BA%94%E7%94%A8%E5%B1%82%E6%A6%82%E8%BF%B0/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="应用层概述">
+                            
+                            <span class="card-title">应用层概述</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-19
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" class="post-category">
+                                技术基础
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">
